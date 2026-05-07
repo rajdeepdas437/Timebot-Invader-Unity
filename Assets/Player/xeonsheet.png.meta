@@ -1,0 +1,721 @@
+fileFormatVersion: 2
+guid: 4ed950d1a78b0f544b1e361429934baf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5056543395677078547
+    second: xeonsheet_0
+  - first:
+      213: -4259354950119962744
+    second: xeonsheet_1
+  - first:
+      213: 2306385811194634109
+    second: xeonsheet_2
+  - first:
+      213: -4444411309317236374
+    second: xeonsheet_3
+  - first:
+      213: 7251879425774657364
+    second: xeonsheet_4
+  - first:
+      213: 6684611383159578179
+    second: xeonsheet_5
+  - first:
+      213: 1034040939125262217
+    second: xeonsheet_6
+  - first:
+      213: -2693396453939817203
+    second: xeonsheet_7
+  - first:
+      213: -4229697610233660813
+    second: xeonsheet_8
+  - first:
+      213: -1778050358226321327
+    second: xeonsheet_9
+  - first:
+      213: 6739569152289330972
+    second: xeonsheet_10
+  - first:
+      213: 4194241837411744110
+    second: xeonsheet_11
+  - first:
+      213: 5581286533717236251
+    second: xeonsheet_12
+  - first:
+      213: -6524218547955742502
+    second: xeonsheet_13
+  - first:
+      213: 4972416749011671253
+    second: xeonsheet_14
+  - first:
+      213: -7579050832861529037
+    second: xeonsheet_15
+  - first:
+      213: -7414466299000190349
+    second: xeonsheet_16
+  - first:
+      213: 5733711772375650643
+    second: xeonsheet_17
+  - first:
+      213: -1207430518675846819
+    second: xeonsheet_18
+  - first:
+      213: -1372402290555004769
+    second: xeonsheet_19
+  - first:
+      213: -3096295284191356409
+    second: xeonsheet_20
+  - first:
+      213: -5177611410488739026
+    second: xeonsheet_21
+  - first:
+      213: 8868564055018414265
+    second: xeonsheet_22
+  - first:
+      213: -412780276446651725
+    second: xeonsheet_23
+  - first:
+      213: 5905094341961531845
+    second: xeonsheet_24
+  - first:
+      213: -423488224591634122
+    second: xeonsheet_25
+  - first:
+      213: 89944506823941301
+    second: xeonsheet_26
+  - first:
+      213: -3831747669075379059
+    second: xeonsheet_27
+  - first:
+      213: -826359932756977535
+    second: xeonsheet_28
+  - first:
+      213: 5811137027406802093
+    second: xeonsheet_29
+  - first:
+      213: -1825865530283492584
+    second: xeonsheet_30
+  - first:
+      213: -2937992801479403515
+    second: xeonsheet_31
+  - first:
+      213: 1056120153717401583
+    second: xeonsheet_32
+  - first:
+      213: -5638998719478219614
+    second: xeonsheet_33
+  - first:
+      213: 1720857762041501117
+    second: xeonsheet_34
+  - first:
+      213: -1456268049887250720
+    second: xeonsheet_35
+  - first:
+      213: -5984779684289058397
+    second: xeonsheet_36
+  - first:
+      213: 4490614315575069329
+    second: xeonsheet_37
+  - first:
+      213: 1732503472518111228
+    second: xeonsheet_38
+  - first:
+      213: 3826057849239099952
+    second: xeonsheet_39
+  - first:
+      213: -7187333739328170560
+    second: xeonsheet_40
+  - first:
+      213: 4266322816516698139
+    second: xeonsheet_41
+  - first:
+      213: -2441413655026878532
+    second: xeonsheet_42
+  - first:
+      213: -4542269194365158405
+    second: xeonsheet_43
+  - first:
+      213: 3742425322621302276
+    second: xeonsheet_44
+  - first:
+      213: -3901236251248188878
+    second: xeonsheet_45
+  - first:
+      213: 8486754758392907966
+    second: xeonsheet_46
+  - first:
+      213: -7967180880925816093
+    second: xeonsheet_47
+  - first:
+      213: 2811900411859281838
+    second: xeonsheet_48
+  - first:
+      213: 3608546751825835118
+    second: xeonsheet_49
+  - first:
+      213: 5034097920699270759
+    second: xeonsheet_50
+  - first:
+      213: 6174157073584320675
+    second: xeonsheet_51
+  - first:
+      213: -4682113175625159202
+    second: xeonsheet_52
+  - first:
+      213: 5550348865117012740
+    second: xeonsheet_53
+  - first:
+      213: 6147289199855147172
+    second: xeonsheet_54
+  - first:
+      213: 1624905162539020757
+    second: xeonsheet_55
+  - first:
+      213: -549623526887699638
+    second: xeonsheet_56
+  - first:
+      213: 7876625783528268545
+    second: xeonsheet_57
+  - first:
+      213: -3302961696359206575
+    second: xeonsheet_58
+  - first:
+      213: -320884527948437805
+    second: xeonsheet_59
+  - first:
+      213: -7653174695592567473
+    second: xeonsheet_60
+  - first:
+      213: -4690856557162555920
+    second: xeonsheet_61
+  - first:
+      213: 2139458425208328883
+    second: xeonsheet_62
+  - first:
+      213: -7551030984834353419
+    second: xeonsheet_63
+  - first:
+      213: 1825819072724109853
+    second: xeonsheet_64
+  - first:
+      213: 4862087984082124032
+    second: xeonsheet_65
+  - first:
+      213: 4768217882508980134
+    second: xeonsheet_66
+  - first:
+      213: 2510416981438100314
+    second: xeonsheet_67
+  - first:
+      213: 8403623303333045700
+    second: xeonsheet_68
+  - first:
+      213: -8180033366767450530
+    second: xeonsheet_69
+  - first:
+      213: 6141488830673610873
+    second: xeonsheet_70
+  - first:
+      213: -6274815074824715580
+    second: xeonsheet_71
+  - first:
+      213: -3537610532322174120
+    second: xeonsheet_72
+  - first:
+      213: 3032677370117200078
+    second: xeonsheet_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: roll1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: debf155829c83d9b0800000000000000
+      internalID: -5056543395677078547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8874cc96d3bb3e4c0800000000000000
+      internalID: -4259354950119962744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fd14fecade10020800000000000000
+      internalID: 2306385811194634109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll3
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69da6036774252c0800000000000000
+      internalID: -4444411309317236374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f13476ae9d3a460800000000000000
+      internalID: 7251879425774657364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e52cae2a284cc50800000000000000
+      internalID: 6684611383159578179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 669
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987c5cb61c6a95e00800000000000000
+      internalID: 1034040939125262217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 669
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05de9302322f9ad0800000000000000
+      internalID: -2693396453939817203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 669
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a34b2fe681d45c0800000000000000
+      internalID: -4229697610233660813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roll6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 512
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1500a25ae981357e0800000000000000
+      internalID: -1778050358226321327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 591
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d81b0030b2910540800000000000000
+      internalID: 4972416749011671253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 590
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cf8ac4c6dc1d690800000000000000
+      internalID: -7579050832861529037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk2
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 591
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a0df04f268a1990800000000000000
+      internalID: -7414466299000190349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 590
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3511dec7a7c329f40800000000000000
+      internalID: 5733711772375650643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b64ae4e5c124b8d4090f524c8f08da7f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      idle0: 1034040939125262217
+      idle1: -2693396453939817203
+      idle2: -4229697610233660813
+      roll0: 2306385811194634109
+      roll1: -5056543395677078547
+      roll2: -4259354950119962744
+      roll3: -4444411309317236374
+      roll4: 7251879425774657364
+      roll5: 6684611383159578179
+      roll6: -1778050358226321327
+      walk0: 4972416749011671253
+      walk1: -7579050832861529037
+      walk2: -7414466299000190349
+      walk3: 5733711772375650643
+      xeonsheet_10: 6739569152289330972
+      xeonsheet_11: 4194241837411744110
+      xeonsheet_12: 5581286533717236251
+      xeonsheet_13: -6524218547955742502
+      xeonsheet_18: -1207430518675846819
+      xeonsheet_19: -1372402290555004769
+      xeonsheet_20: -3096295284191356409
+      xeonsheet_21: -5177611410488739026
+      xeonsheet_22: 8868564055018414265
+      xeonsheet_23: -412780276446651725
+      xeonsheet_24: 5905094341961531845
+      xeonsheet_25: -423488224591634122
+      xeonsheet_26: 89944506823941301
+      xeonsheet_27: -3831747669075379059
+      xeonsheet_28: -826359932756977535
+      xeonsheet_29: 5811137027406802093
+      xeonsheet_30: -1825865530283492584
+      xeonsheet_31: -2937992801479403515
+      xeonsheet_32: 1056120153717401583
+      xeonsheet_33: -5638998719478219614
+      xeonsheet_34: 1720857762041501117
+      xeonsheet_35: -1456268049887250720
+      xeonsheet_36: -5984779684289058397
+      xeonsheet_37: 4490614315575069329
+      xeonsheet_38: 1732503472518111228
+      xeonsheet_39: 3826057849239099952
+      xeonsheet_40: -7187333739328170560
+      xeonsheet_41: 4266322816516698139
+      xeonsheet_42: -2441413655026878532
+      xeonsheet_43: -4542269194365158405
+      xeonsheet_44: 3742425322621302276
+      xeonsheet_45: -3901236251248188878
+      xeonsheet_46: 8486754758392907966
+      xeonsheet_47: -7967180880925816093
+      xeonsheet_48: 2811900411859281838
+      xeonsheet_49: 3608546751825835118
+      xeonsheet_50: 5034097920699270759
+      xeonsheet_51: 6174157073584320675
+      xeonsheet_52: -4682113175625159202
+      xeonsheet_53: 5550348865117012740
+      xeonsheet_54: 6147289199855147172
+      xeonsheet_55: 1624905162539020757
+      xeonsheet_56: -549623526887699638
+      xeonsheet_57: 7876625783528268545
+      xeonsheet_58: -3302961696359206575
+      xeonsheet_59: -320884527948437805
+      xeonsheet_60: -7653174695592567473
+      xeonsheet_61: -4690856557162555920
+      xeonsheet_62: 2139458425208328883
+      xeonsheet_63: -7551030984834353419
+      xeonsheet_64: 1825819072724109853
+      xeonsheet_65: 4862087984082124032
+      xeonsheet_66: 4768217882508980134
+      xeonsheet_67: 2510416981438100314
+      xeonsheet_68: 8403623303333045700
+      xeonsheet_69: -8180033366767450530
+      xeonsheet_70: 6141488830673610873
+      xeonsheet_71: -6274815074824715580
+      xeonsheet_72: -3537610532322174120
+      xeonsheet_73: 3032677370117200078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
