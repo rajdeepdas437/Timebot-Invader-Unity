@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Transform WeaponPivot;
     public Camera mainCamera;
+    public Animator playerAnim;
     
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         mainCamera=Camera.main;
         WeaponPivot=transform.Find("WeaponPivotPoint");
+        playerAnim = GetComponent<Animator>();
     }
 
     
@@ -39,5 +41,11 @@ public class PlayerController : MonoBehaviour
             transform.localScale = Vector3.one;
             WeaponPivot.localScale = Vector3.one;
         }
+
+        if(moveInput!=Vector2.zero)
+        {
+            playerAnim.SetBool("isWalking", true);
+        }
+        else playerAnim.SetBool("isWalking", false);
     }
 }
