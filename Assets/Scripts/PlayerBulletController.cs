@@ -4,6 +4,7 @@ public class PlayerBulletController : MonoBehaviour
 {
     private float BulletSpeed = 20f;
     public Rigidbody2D bulletRB;
+    public GameObject bulletEffect;
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
@@ -16,6 +17,12 @@ public class PlayerBulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);       
+        Destroy(gameObject);
+        Instantiate(bulletEffect, this.transform.position, this.transform.rotation);       
+    }
+
+    void DestroyEffect()
+    {
+        Destroy(bulletEffect);
     }
 }

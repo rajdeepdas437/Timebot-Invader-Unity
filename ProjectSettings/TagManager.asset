@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player Bullets
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3521420819
+    locked: 0
+  - name: Bullets
+    uniqueID: 3647813617
     locked: 0
   m_RenderingLayers:
   - Default

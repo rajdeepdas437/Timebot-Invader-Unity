@@ -1,5 +1,6 @@
 using System;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 
@@ -12,8 +13,11 @@ public class PlayerController : MonoBehaviour
     public Transform WeaponPivot;
     public Camera mainCamera;
     public Animator playerAnim;
+
     public GameObject bullet;
     public Transform firePoint;
+    public float fireCooldown = 0.5f;
+    private float fireCounter;
     
     void Start()
     {
@@ -22,16 +26,19 @@ public class PlayerController : MonoBehaviour
         WeaponPivot=transform.Find("WeaponPivotPoint");
         playerAnim = GetComponent<Animator>();
         firePoint=transform.Find("WeaponPivotPoint/Fire Point");
+        fireCounter=fireCooldown;
     }
 
     
     void Update()
     {
+        //Movement
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
         rb.linearVelocity=moveInput*MovementSpeed;
 
+        //WeaponAim
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerPos = mainCamera.WorldToScreenPoint(transform.localPosition);
         float mouseAngle = Mathf.Atan2((mousePos.y-playerPos.y),(mousePos.x-playerPos.x))*Mathf.Rad2Deg;
@@ -53,9 +60,15 @@ public class PlayerController : MonoBehaviour
         }
         else playerAnim.SetBool("isWalking", false);
 
-        if(Input.GetMouseButtonDown(0))
+        //Firing
+        if(Input.GetMouseButton(0) & fireCounter<=0)
         {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
+            fireCounter=fireCooldown;
+        }
+        if(fireCounter>0)
+        {
+            fireCounter-=Time.deltaTime;
         }
     }
 }
