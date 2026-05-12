@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEditor.Search;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public Transform WeaponPivot;
     public Camera mainCamera;
     public Animator playerAnim;
+    public GameObject bullet;
+    public Transform firePoint;
     
     void Start()
     {
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
         mainCamera=Camera.main;
         WeaponPivot=transform.Find("WeaponPivotPoint");
         playerAnim = GetComponent<Animator>();
+        firePoint=transform.Find("WeaponPivotPoint/Fire Point");
     }
 
     
@@ -48,5 +52,10 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetBool("isWalking", true);
         }
         else playerAnim.SetBool("isWalking", false);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+        }
     }
 }
