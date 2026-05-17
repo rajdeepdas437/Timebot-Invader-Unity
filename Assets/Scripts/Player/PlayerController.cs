@@ -32,43 +32,57 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        //Movement
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
-        moveInput.Normalize();
-        rb.linearVelocity=moveInput*MovementSpeed;
+        PlayerMovement();
+        WeaponAim();
+        PlayerAnimation();
+        PlayerShooting();
+    }
 
-        //WeaponAim
+    private void PlayerShooting()
+    {
+        if (Input.GetMouseButton(0) & fireCounter <= 0)
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            fireCounter = fireCooldown;
+        }
+        if (fireCounter > 0)
+        {
+            fireCounter -= Time.deltaTime;
+        }
+    }
+
+    private void PlayerAnimation()
+    {
+        if (moveInput != Vector2.zero)
+        {
+            playerAnim.SetBool("isWalking", true);
+        }
+        else playerAnim.SetBool("isWalking", false);
+    }
+
+    private void WeaponAim()
+    {
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerPos = mainCamera.WorldToScreenPoint(transform.localPosition);
-        float mouseAngle = Mathf.Atan2((mousePos.y-playerPos.y),(mousePos.x-playerPos.x))*Mathf.Rad2Deg;
-        WeaponPivot.rotation = Quaternion.Euler(0,0,mouseAngle);
-        if(mousePos.x<playerPos.x)
+        float mouseAngle = Mathf.Atan2((mousePos.y - playerPos.y), (mousePos.x - playerPos.x)) * Mathf.Rad2Deg;
+        WeaponPivot.rotation = Quaternion.Euler(0, 0, mouseAngle);
+        if (mousePos.x < playerPos.x)
         {
-            transform.localScale = new Vector3(-1f,1f,1f);
-            WeaponPivot.localScale = new Vector3(-1f,-1f,1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+            WeaponPivot.localScale = new Vector3(-1f, -1f, 1f);
         }
         else
         {
             transform.localScale = Vector3.one;
             WeaponPivot.localScale = Vector3.one;
         }
+    }
 
-        if(moveInput!=Vector2.zero)
-        {
-            playerAnim.SetBool("isWalking", true);
-        }
-        else playerAnim.SetBool("isWalking", false);
-
-        //Firing
-        if(Input.GetMouseButton(0) & fireCounter<=0)
-        {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-            fireCounter=fireCooldown;
-        }
-        if(fireCounter>0)
-        {
-            fireCounter-=Time.deltaTime;
-        }
+    private void PlayerMovement()
+    {
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.Normalize();
+        rb.linearVelocity = moveInput * MovementSpeed;
     }
 }

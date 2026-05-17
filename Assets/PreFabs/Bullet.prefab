@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -647153679
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8102358098348255977, guid: 3b7afac5a2ee7124d88388b664e88186, type: 3}
@@ -182,6 +182,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBulletController
   bulletRB: {fileID: 0}
   bulletEffect: {fileID: 3069660149580295994, guid: d575f18d48af0c945aa62605c4988445, type: 3}
+  damageEffects:
+  - {fileID: 1972007663699011970, guid: 73e8043094888b54f91a7e1df158a134, type: 3}
+  - {fileID: 7689959191376660972, guid: 987bd48c32773de4cb4a109ca217f662, type: 3}
+  - {fileID: 5902776752271393860, guid: c1c66c7b016e55449a678d66a69bc1e1, type: 3}
+  - {fileID: 1178143706192286401, guid: dc7d814739a77a9458679c52dc9710eb, type: 3}
+  - {fileID: 7483738603059191182, guid: 099358292aac7ff4f96377340f0dcbab, type: 3}
 --- !u!96 &-4119351616082245650
 TrailRenderer:
   serializedVersion: 4
@@ -228,7 +234,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -647153679
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Time: 0.3
