@@ -117,18 +117,4 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color=Color.red;
-        Gizmos.DrawWireSphere(transform.position, enemyRange);
-
-        Gizmos.color=Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
-
-        Gizmos.color=Color.aquamarine;
-        Gizmos.DrawWireSphere(transform.position, shootingRange);
-    }
-
 }
