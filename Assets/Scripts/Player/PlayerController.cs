@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEditor.Search;
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
     public float fireCooldown = 0.5f;
     private float fireCounter;
     
+    private float currentSpeed;
+    private bool canDash;
+    public float dashSpeed=20f ,dashDuration=0.3f, dashCooldown=1f;
+
+    
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -27,6 +33,8 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         firePoint=transform.Find("WeaponPivotPoint/Fire Point");
         fireCounter=fireCooldown;
+        currentSpeed=MovementSpeed;
+        canDash=true;
     }
 
     
@@ -36,6 +44,13 @@ public class PlayerController : MonoBehaviour
         WeaponAim();
         PlayerAnimation();
         PlayerShooting();
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            canDash=false;
+            StartCoroutine(Dash());
+            StartCoroutine(DashCooldown());
+        }
     }
 
     private void PlayerShooting()
@@ -83,6 +98,19 @@ public class PlayerController : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
-        rb.linearVelocity = moveInput * MovementSpeed;
+        rb.linearVelocity = moveInput * currentSpeed;
     }
+
+    IEnumerator Dash()
+    {
+        currentSpeed=dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        currentSpeed=MovementSpeed;
+    }
+
+    IEnumerator DashCooldown()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
+    } 
 }

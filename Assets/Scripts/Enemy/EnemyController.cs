@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour
         skeleCollider=GetComponent<Collider2D>();
         canShoot=true;
         meleeAttack=false;
-        firePoint=GameObject.Find("firePoint").transform;
+        firePoint=transform.Find("firePoint");
     }
 
     void Update()
