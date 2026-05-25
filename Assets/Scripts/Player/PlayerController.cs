@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using JetBrains.Annotations;
+using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
 
     public int MovementSpeed=10;
     private Vector2 moveInput;
@@ -20,13 +22,14 @@ public class PlayerController : MonoBehaviour
     public float fireCooldown = 0.5f;
     private float fireCounter;
     
-    private float currentSpeed;
-    private bool canDash;
+    public float currentSpeed;
+    private bool canDash, isDashing;
     public float dashSpeed=20f ,dashDuration=0.3f, dashCooldown=1f;
 
     
     void Start()
     {
+        instance = this;
         rb=GetComponent<Rigidbody2D>();
         mainCamera=Camera.main;
         WeaponPivot=transform.Find("WeaponPivotPoint");
@@ -103,14 +106,22 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Dash()
     {
+        isDashing=true;
         currentSpeed=dashSpeed;
+        playerAnim.SetTrigger("Dash");
         yield return new WaitForSeconds(dashDuration);
         currentSpeed=MovementSpeed;
+        isDashing=false;
     }
 
     IEnumerator DashCooldown()
     {
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    public bool IsDashing()
+    {
+        return isDashing;
     } 
 }
