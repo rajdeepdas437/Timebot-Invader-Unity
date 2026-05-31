@@ -8,6 +8,7 @@ public class EnemySwordController : MonoBehaviour
     public Rigidbody2D swordRB;
     public float swordSpeed=10f;
     private Animator swordAnim;
+    private int damage=20;
     
     void Start()
     {
@@ -33,6 +34,10 @@ public class EnemySwordController : MonoBehaviour
     {
         swordAnim.SetTrigger("Hit");
         swordSpeed=0;
+        if(collision.CompareTag("Player"))
+        {
+            player.GetComponent<PlayerHealthHandler>().TakeDamage(damage);
+        }
     }
 
     void Destroy()

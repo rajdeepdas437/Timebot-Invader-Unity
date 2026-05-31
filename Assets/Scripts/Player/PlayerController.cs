@@ -1,30 +1,30 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
-    public int MovementSpeed=10;
+    [SerializeField] int MovementSpeed=10;
     private Vector2 moveInput;
-    public Rigidbody2D rb;
-    public Transform WeaponPivot;
-    public Camera mainCamera;
-    public Animator playerAnim;
-
-    public GameObject bullet;
-    public Transform firePoint;
-    public float fireCooldown = 0.5f;
-    private float fireCounter;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Transform WeaponPivot;
+    [SerializeField] Camera mainCamera;
+    [SerializeField] Animator playerAnim;
     
-    public float currentSpeed;
+    [SerializeField] float currentSpeed;
     private bool canDash, isDashing;
-    public float dashSpeed=20f ,dashDuration=0.3f, dashCooldown=1f;
+    [SerializeField] float dashSpeed=20f ,dashDuration=0.3f, dashCooldown=1f;
+
+    [SerializeField] List<WeaponSystem> availableWeapons = new List<WeaponSystem>();
+    private int currentGun;
 
     
     void Start()
@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
         mainCamera=Camera.main;
         WeaponPivot=transform.Find("WeaponPivotPoint");
         playerAnim = GetComponent<Animator>();
-        firePoint=transform.Find("WeaponPivotPoint/Fire Point");
-        fireCounter=fireCooldown;
         currentSpeed=MovementSpeed;
         canDash=true;
+        currentGun=0;
+        SwitchWeaponUI(availableWeapons[currentGun]);
     }
 
     
@@ -46,26 +46,54 @@ public class PlayerController : MonoBehaviour
         PlayerMovement();
         WeaponAim();
         PlayerAnimation();
-        PlayerShooting();
+        PlayerDash();
+        SwitchGuns();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            canDash=false;
-            StartCoroutine(Dash());
-            StartCoroutine(DashCooldown());
-        }
     }
 
-    private void PlayerShooting()
+    public void SwitchGuns()
     {
-        if (Input.GetMouseButton(0) & fireCounter <= 0)
+        if(Input.GetKeyDown(KeyCode.Tab))
         {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-            fireCounter = fireCooldown;
+            if(availableWeapons.Count > 0)
+            {
+                currentGun++;
+
+                if(currentGun>availableWeapons.Count-1)
+                {
+                    currentGun=0;
+                }
+
+                foreach(WeaponSystem Weapon in availableWeapons)
+                {
+                    Weapon.gameObject.SetActive(false);
+                    if(Weapon == availableWeapons[currentGun])
+                    {
+                        Weapon.gameObject.SetActive(true);
+                        SwitchWeaponUI(Weapon);
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("No Guns available");
+            }
         }
-        if (fireCounter > 0)
+        
+    }
+
+    private static void SwitchWeaponUI(WeaponSystem Weapon)
+    {
+        UIManager.instance.WeaponUI(Weapon.gameObject.GetComponent<WeaponSystem>().GetGunImage(), Weapon.gameObject.GetComponent<WeaponSystem>().GetGunName());
+    }
+
+    private void PlayerDash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            fireCounter -= Time.deltaTime;
+            canDash = false;
+            StartCoroutine(Dash());
+            StartCoroutine(DashCooldown());
         }
     }
 

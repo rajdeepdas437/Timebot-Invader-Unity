@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PlayerBulletController : MonoBehaviour
 {
-    private float BulletSpeed = 20f;
+    [SerializeField] float BulletSpeed = 20f;
     public Rigidbody2D bulletRB;
     public GameObject bulletEffect;
     public GameObject[] damageEffects;
     private int i;
-    private int damageDealt=20;
+    [SerializeField] int damageDealt=20;
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();

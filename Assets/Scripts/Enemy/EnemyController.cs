@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyShooting()
     {
-        if (!meleeAttack && canShoot && Vector3.Distance(player.position, transform.position) < shootingRange)
+        if (!meleeAttack && canShoot && Vector3.Distance(player.position, transform.position) < shootingRange && player!=null)
         {
             SkeleAnim.SetTrigger("CanThrow");
             canShoot = false;
