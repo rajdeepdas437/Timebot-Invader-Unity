@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,11 +10,16 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] Image weaponImage;
     [SerializeField] TextMeshProUGUI weaponName;
+    public Slider healthSlider;
+    public TextMeshProUGUI healthText;
+    [SerializeField] GameObject deathScreen;
+    private Animator deathScreenAnim;
 
     void Start()
     {
         instance = this;
         anim=GetComponent<Animator>();
+        
     }
 
     public void InitiateFadeAnim()
@@ -26,4 +32,17 @@ public class UIManager : MonoBehaviour
         weaponImage.sprite = gunImage;
         weaponName.text = gunName;
     }
+    public void TurnOnDeathScreen()
+    {
+        deathScreen.SetActive(true);
+        deathScreenAnim=transform.Find("Death Screen").GetComponent<Animator>();
+        StartCoroutine(StartBloodTrailAnim());
+    }
+
+    IEnumerator StartBloodTrailAnim()
+    {
+        yield return new WaitForSeconds(0.35f);
+        deathScreenAnim.SetBool("isDead", true);
+    }
+
 }

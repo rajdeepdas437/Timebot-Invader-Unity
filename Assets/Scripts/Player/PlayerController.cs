@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] List<WeaponSystem> availableWeapons = new List<WeaponSystem>();
     private int currentGun;
 
+    [SerializeField] PlayerHealthHandler playerHealthHandler;
+
     
     void Start()
     {
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
             canDash = false;
             StartCoroutine(Dash());
             StartCoroutine(DashCooldown());
+            StartCoroutine(playerHealthHandler.Invincibility());    
         }
     }
 
