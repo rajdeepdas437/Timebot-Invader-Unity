@@ -12,6 +12,11 @@ public class Breakables : MonoBehaviour
             if(collision.gameObject.GetComponent<PlayerController>().IsDashing())
             {
                 GetComponent<Animator>().SetTrigger("Break");
+
+                if(GetComponent<ItemPickup>()!=null)
+                {
+                    GetComponent<ItemPickup>().DropItem();
+                }
             }    
         }
         
@@ -22,6 +27,11 @@ public class Breakables : MonoBehaviour
         if(collision.CompareTag("Player Bullet"))
         {
             GetComponent<Animator>().SetTrigger("Break");
+            
+            if(GetComponent<ItemPickup>()!=null)
+                {
+                    GetComponent<ItemPickup>().DropItem();
+                }
         }
     }
 

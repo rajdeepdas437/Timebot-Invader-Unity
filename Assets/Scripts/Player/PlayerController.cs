@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
@@ -38,7 +39,15 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         currentSpeed=MovementSpeed;
         canDash=true;
-        currentGun=0;
+        
+        for(int i=0; i<availableWeapons.Count; i++)
+        {
+            if(availableWeapons[i].gameObject.activeInHierarchy)
+            {
+                currentGun=i;
+            }
+        }
+        
         SwitchWeaponUI(availableWeapons[currentGun]);
     }
 
@@ -154,5 +163,31 @@ public class PlayerController : MonoBehaviour
     public bool IsDashing()
     {
         return isDashing;
-    } 
+    }
+
+    public List<WeaponSystem> GetAvailableGuns()
+    {
+        return availableWeapons;
+    }
+
+    public Transform GetWeaponArm()
+    {
+        return WeaponPivot;
+    }
+
+    public void AddGuns(WeaponSystem newWeapon)
+    {
+        availableWeapons.Add(newWeapon);
+        currentGun=availableWeapons.Count-1;
+
+        foreach(WeaponSystem Weapon in availableWeapons)
+        {
+            Weapon.gameObject.SetActive(false);
+            if(Weapon == availableWeapons[currentGun])
+            {
+                Weapon.gameObject.SetActive(true);
+                SwitchWeaponUI(Weapon);
+            }
+        }
+    }
 }

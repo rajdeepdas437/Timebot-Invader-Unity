@@ -14,6 +14,7 @@ public class RoomManager : MonoBehaviour
         roomCollider=GetComponent<Collider2D>();
         contactFilter2D.SetLayerMask(LayerMask.GetMask("Enemy"));
         roomCollider.Overlap(contactFilter2D, enemies);
+        AudioManager.instance.PlayerLevelMusic();
     }
 
     void Update()

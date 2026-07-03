@@ -31,6 +31,7 @@ public class PlayerHealthHandler : MonoBehaviour
             if(currentHealth<=0)
             {
                 UIManager.instance.TurnOnDeathScreen();
+                AudioManager.instance.DeathMusic();
                 gameObject.SetActive(false);
             }
             StartCoroutine(Invincibility());

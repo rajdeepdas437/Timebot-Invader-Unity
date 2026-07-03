@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8604063498397323203}
   - component: {fileID: 1666508302903999771}
   - component: {fileID: 1786565235701661136}
+  - component: {fileID: 955144331203978868}
   m_Layer: 0
   m_Name: Pot1
   m_TagString: Untagged
@@ -191,3 +192,19 @@ MonoBehaviour:
   - {fileID: 7440589991389436329, guid: 7c1603da53e2f054f91cac6f5d677c16, type: 3}
   - {fileID: 7517844508812491184, guid: 2d1140fd7d52e594f8be1ea2004c9402, type: 3}
   - {fileID: 7041816976528408365, guid: ba63a2c8d0387f6478dc28e9caf58ed1, type: 3}
+--- !u!114 &955144331203978868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3133168916870619920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01ed2c4ae3ab5748af6f874bd14d93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
+  dropsItem: 1
+  itemsToDrop:
+  - {fileID: 2246273341443275220, guid: 6b33616087add1b45844153250b3b702, type: 3}
+  itemDropChance: 0.5
