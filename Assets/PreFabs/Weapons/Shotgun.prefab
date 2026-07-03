@@ -110,6 +110,7 @@ MonoBehaviour:
   fireCooldown: 0.5
   weaponImage: {fileID: 3330976304839631438, guid: 23a79f053de07634aa9ae108c216df0a, type: 3}
   weaponName: Shotgun
+  SFXNum: 9
 --- !u!1 &9104115182889660222
 GameObject:
   m_ObjectHideFlags: 0

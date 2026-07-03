@@ -4,6 +4,7 @@ using UnityEngine;
 public class Breakables : MonoBehaviour
 {
     [SerializeField] GameObject[] brokenPieces;
+    [SerializeField] int breakSFXNum;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,8 +12,8 @@ public class Breakables : MonoBehaviour
         {
             if(collision.gameObject.GetComponent<PlayerController>().IsDashing())
             {
+                PlayBreakSFX();
                 GetComponent<Animator>().SetTrigger("Break");
-
                 if(GetComponent<ItemPickup>()!=null)
                 {
                     GetComponent<ItemPickup>().DropItem();
@@ -26,8 +27,8 @@ public class Breakables : MonoBehaviour
     {
         if(collision.CompareTag("Player Bullet"))
         {
+            PlayBreakSFX();
             GetComponent<Animator>().SetTrigger("Break");
-            
             if(GetComponent<ItemPickup>()!=null)
                 {
                     GetComponent<ItemPickup>().DropItem();
@@ -43,6 +44,12 @@ public class Breakables : MonoBehaviour
             Instantiate(brokenPieces[i], transform.position, Quaternion.Euler(0f,0f,90f*randomRotation));
         }
         
+        
         Destroy(gameObject);
+    }
+
+    public void PlayBreakSFX()
+    {
+        AudioManager.instance.PlaySFX(breakSFXNum);
     }
 }

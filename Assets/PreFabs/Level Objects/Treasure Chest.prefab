@@ -145,6 +145,7 @@ MonoBehaviour:
   openChestSprite: {fileID: -8691396364413083667, guid: 6fa046437c851644ab62af4a381de70f, type: 3}
   openKeyText: {fileID: 1230956339490434962}
   spawnPoint: {fileID: 1556145311483404276}
+  ChestSFX: 1
 --- !u!61 &4421586329478024652
 BoxCollider2D:
   m_ObjectHideFlags: 0

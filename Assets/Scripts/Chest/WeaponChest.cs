@@ -12,6 +12,7 @@ public class WeaponChest : MonoBehaviour
     [SerializeField] Transform spawnPoint;
     private bool opened=false;
     private bool canOpen;
+    [SerializeField] int ChestSFX;
     void Start()
     {
         chestSR=GetComponent<SpriteRenderer>();
@@ -23,6 +24,7 @@ public class WeaponChest : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && canOpen && !opened)
         {
+            AudioManager.instance.PlaySFX(ChestSFX);
             chestSR.sprite=openChestSprite;
             int i = Random.Range(0, potentialWeapons.Count());
             Instantiate(potentialWeapons[i], spawnPoint);

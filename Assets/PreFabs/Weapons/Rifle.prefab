@@ -110,6 +110,7 @@ MonoBehaviour:
   fireCooldown: 0.2
   weaponImage: {fileID: -896113644789240630, guid: d093d6a823596ba48858cd460d9a6be0, type: 3}
   weaponName: Rifle
+  SFXNum: 7
 --- !u!1 &6009080200296480366
 GameObject:
   m_ObjectHideFlags: 0

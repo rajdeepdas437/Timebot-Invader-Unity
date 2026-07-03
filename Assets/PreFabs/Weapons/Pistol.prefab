@@ -141,3 +141,4 @@ MonoBehaviour:
   fireCooldown: 0.3
   weaponImage: {fileID: 9202094985950219199, guid: c7b9b36ae4c5bae4b8c7f64f9114c161, type: 3}
   weaponName: Pistol
+  SFXNum: 5

@@ -89,6 +89,7 @@ MonoBehaviour:
   enemyProjectile: {fileID: 8479330454311262644, guid: c5d1b086904437a43a3a907d80778bd8, type: 3}
   throwCooldown: 1
   shootingRange: 6
+  enemyDamageSFXNum: 2
 --- !u!50 &6652182280968874472
 Rigidbody2D:
   serializedVersion: 5

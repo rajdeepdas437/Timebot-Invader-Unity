@@ -8,6 +8,7 @@ public class PlayerHealthHandler : MonoBehaviour
     [SerializeField] float invincibilityDuation=2f;
     private bool isInvincible;
     [SerializeField] SpriteRenderer playerSprite;
+    [SerializeField] int damageSFXNum;
     void Start()
     {
         currentHealth = maxHealth;
@@ -25,6 +26,7 @@ public class PlayerHealthHandler : MonoBehaviour
     {
         if(!isInvincible)
         {
+            AudioManager.instance.PlaySFX(damageSFXNum);
             currentHealth-=damage;
             UIManager.instance.healthSlider.value=currentHealth;
             UIManager.instance.healthText.text=currentHealth+"/"+maxHealth;

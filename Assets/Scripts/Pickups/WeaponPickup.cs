@@ -4,6 +4,7 @@ public class WeaponPickup : MonoBehaviour
 {
     [SerializeField] WeaponSystem weapon;
     private bool pickedUp=false;
+    [SerializeField] int weaponPickupSFXNum;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -15,6 +16,7 @@ public class WeaponPickup : MonoBehaviour
                 else if(!pickedUp)
                 {
                     pickedUp=true;
+                    AudioManager.instance.PlaySFX(weaponPickupSFXNum);
                     WeaponSystem weaponToAdd = Instantiate(weapon, collision.GetComponent<PlayerController>().GetWeaponArm());
                     collision.GetComponent<PlayerController>().AddGuns(weaponToAdd);
                     Destroy(gameObject);

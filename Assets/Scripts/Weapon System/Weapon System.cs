@@ -9,6 +9,7 @@ public class WeaponSystem : MonoBehaviour
 
     [SerializeField] Sprite weaponImage;
     [SerializeField] string weaponName;
+    [SerializeField] int SFXNum;
     
 
     void Start()
@@ -20,6 +21,7 @@ public class WeaponSystem : MonoBehaviour
     {
         if (Input.GetMouseButton(0) & fireCounter <= 0)
         {
+            AudioManager.instance.PlaySFX(SFXNum);
             Instantiate(bullet, firePoint.position, firePoint.rotation);
             fireCounter = fireCooldown;
         }

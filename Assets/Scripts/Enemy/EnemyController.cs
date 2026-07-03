@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour
     private Collider2D skeleCollider;
     private Transform firePoint;
     public float shootingRange=6f;
+    [SerializeField] int enemyDamageSFXNum;
     
 
     void Start()
@@ -110,6 +111,7 @@ public class EnemyController : MonoBehaviour
     public void DamageEnemy(int damage)
     {
         enemyHealth -= damage;
+        AudioManager.instance.PlaySFX(enemyDamageSFXNum);
         if(enemyHealth <= 0)
         {
             Destroy(gameObject);

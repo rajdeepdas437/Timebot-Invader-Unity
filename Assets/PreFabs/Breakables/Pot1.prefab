@@ -192,6 +192,7 @@ MonoBehaviour:
   - {fileID: 7440589991389436329, guid: 7c1603da53e2f054f91cac6f5d677c16, type: 3}
   - {fileID: 7517844508812491184, guid: 2d1140fd7d52e594f8be1ea2004c9402, type: 3}
   - {fileID: 7041816976528408365, guid: ba63a2c8d0387f6478dc28e9caf58ed1, type: 3}
+  breakSFXNum: 0
 --- !u!114 &955144331203978868
 MonoBehaviour:
   m_ObjectHideFlags: 0

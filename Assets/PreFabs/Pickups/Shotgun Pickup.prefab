@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   weapon: {fileID: 6222390880509966840, guid: 7f9e8d4b7f148bd4e962a6fb4af8b09e, type: 3}
+  weaponPickupSFXNum: 11
 --- !u!95 &296042720565480250
 Animator:
   serializedVersion: 7

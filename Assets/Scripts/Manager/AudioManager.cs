@@ -5,8 +5,10 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     [SerializeField] AudioClip[] Music;
+    [SerializeField] GameObject[] SFX;
     private AudioSource audioSource;
-    void Start()
+    private GameObject tempSFX;
+    void Awake()
     {
         instance = this;
         audioSource = GetComponent<AudioSource>();
@@ -26,5 +28,18 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.clip = Music[0];
         audioSource.Play();
+    }
+
+    public void PlaySFX(int SFXnum)
+    {
+        // AudioSource.PlayClipAtPoint(SFX[SFXnum], Camera.main.transform.position);
+        tempSFX = Instantiate(SFX[SFXnum], Camera.main.transform);
+        float clipDuration = tempSFX.GetComponent<AudioSource>().clip.length;
+        Invoke(nameof(StopSFX), clipDuration);
+    }
+
+    void StopSFX()
+    {
+        Destroy(tempSFX);
     }
 }

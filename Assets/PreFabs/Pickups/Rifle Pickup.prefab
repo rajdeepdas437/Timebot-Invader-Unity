@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   weapon: {fileID: 8733716531706220760, guid: d217265ef04368244aa60691c3fbb6cf, type: 3}
+  weaponPickupSFXNum: 11
 --- !u!95 &9074241830981405326
 Animator:
   serializedVersion: 7

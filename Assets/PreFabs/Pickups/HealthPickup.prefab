@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   healAmount: 10
+  healthPickupSFXNum: 4
 --- !u!95 &1314264408732275736
 Animator:
   serializedVersion: 7
