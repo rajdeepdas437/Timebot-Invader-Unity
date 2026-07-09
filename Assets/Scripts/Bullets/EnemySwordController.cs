@@ -24,11 +24,6 @@ public class EnemySwordController : MonoBehaviour
         swordRB.linearVelocity=playerDirection*swordSpeed;  
     }
 
-    public void IgnoreCollider(Collider2D enemyCollider)
-    {
-        Collider2D swordCollider = GetComponent<Collider2D>();
-        Physics2D.IgnoreCollision(swordCollider, enemyCollider);
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
