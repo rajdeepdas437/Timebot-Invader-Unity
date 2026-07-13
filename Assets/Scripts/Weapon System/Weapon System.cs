@@ -10,6 +10,9 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField] Sprite weaponImage;
     [SerializeField] string weaponName;
     [SerializeField] int SFXNum;
+
+    [SerializeField] int weaponPrice;
+    [SerializeField] Sprite weaponShopSprite;
     
 
     void Start()
@@ -38,6 +41,16 @@ public class WeaponSystem : MonoBehaviour
     public string GetGunName()
     {
         return weaponName;
+    }
+
+    public int GetWeaponPrice()
+    {
+        return weaponPrice;
+    }
+
+    public Sprite GetWeaponShopSprite()
+    {
+        return weaponShopSprite;
     }
 
 

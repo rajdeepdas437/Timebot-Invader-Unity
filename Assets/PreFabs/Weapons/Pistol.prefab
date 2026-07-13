@@ -142,3 +142,5 @@ MonoBehaviour:
   weaponImage: {fileID: 9202094985950219199, guid: c7b9b36ae4c5bae4b8c7f64f9114c161, type: 3}
   weaponName: Pistol
   SFXNum: 5
+  weaponPrice: 10
+  weaponShopSprite: {fileID: -6365269866896117494, guid: f171c77d4b76d3b4bad85fffe693ac6d, type: 3}

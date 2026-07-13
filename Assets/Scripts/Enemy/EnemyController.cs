@@ -238,6 +238,11 @@ public class EnemyController : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(bloodSplatter, transform.position, transform.rotation);
             }
+
+            if(GetComponent<ItemPickup>()!=null)
+                {
+                    GetComponent<ItemPickup>().DropItem();
+                }
             
         }
     }

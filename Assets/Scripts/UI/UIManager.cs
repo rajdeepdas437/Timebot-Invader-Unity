@@ -14,11 +14,13 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI healthText;
     [SerializeField] GameObject deathScreen;
     private Animator deathScreenAnim;
+    [SerializeField] TextMeshProUGUI coinText;
 
     void Start()
     {
         instance = this;
         anim=GetComponent<Animator>();
+        coinText.text="0";
         
     }
 
@@ -44,5 +46,10 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(0.35f);
         deathScreenAnim.SetBool("isDead", true);
     }
+
+    public void UpdateCoinUI(int newCoins)
+    {
+        coinText.text = newCoins.ToString();
+    } 
 
 }

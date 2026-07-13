@@ -111,6 +111,8 @@ MonoBehaviour:
   weaponImage: {fileID: -896113644789240630, guid: d093d6a823596ba48858cd460d9a6be0, type: 3}
   weaponName: Rifle
   SFXNum: 7
+  weaponPrice: 20
+  weaponShopSprite: {fileID: -3825866775342625022, guid: 144f9ded3cdf0e847b75008880a8c194, type: 3}
 --- !u!1 &6009080200296480366
 GameObject:
   m_ObjectHideFlags: 0
