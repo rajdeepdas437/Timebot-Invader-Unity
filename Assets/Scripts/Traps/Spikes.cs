@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spikes : MonoBehaviour
 {
     private Collider2D player;
-    private int damage=10;
+    [SerializeField] int damage=10;
     private Animator anim;
     void Start()
     {

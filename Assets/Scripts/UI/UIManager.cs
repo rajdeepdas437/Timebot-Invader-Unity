@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -10,18 +11,30 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] Image weaponImage;
     [SerializeField] TextMeshProUGUI weaponName;
+
     public Slider healthSlider;
     public TextMeshProUGUI healthText;
+
     [SerializeField] GameObject deathScreen;
     private Animator deathScreenAnim;
+
     [SerializeField] TextMeshProUGUI coinText;
+
+    [SerializeField] GameObject pauseMenu;
 
     void Start()
     {
         instance = this;
         anim=GetComponent<Animator>();
-        coinText.text="0";
-        
+        coinText.text="0";   
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            LevelManager.instance.PauseResumeGame();
+        }
     }
 
     public void InitiateFadeAnim()
@@ -51,5 +64,20 @@ public class UIManager : MonoBehaviour
     {
         coinText.text = newCoins.ToString();
     } 
+
+    public void RetryButton()
+    {
+        LevelManager.instance.Retry();
+    }
+
+    public void MainMenuButton()
+    {
+        LevelManager.instance.MainMenu();
+    }
+
+    public void PauseMenu(bool onOff)
+    {
+        pauseMenu.SetActive(onOff);
+    }
 
 }

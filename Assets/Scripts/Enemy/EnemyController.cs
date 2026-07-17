@@ -79,6 +79,9 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyShooting()
     {
+        if(LevelManager.instance.IsGamePaused())
+            return;
+            
         float playerEnemyDistance = Vector3.Distance(player.position, transform.position);
 
         if (!meleeAttack && canShoot && playerEnemyDistance < shootingRange && player.gameObject.activeInHierarchy)

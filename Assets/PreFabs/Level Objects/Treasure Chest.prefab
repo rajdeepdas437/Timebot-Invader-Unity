@@ -260,7 +260,7 @@ MonoBehaviour:
   m_text: Press E to open Chest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e68c23d00ad0fa04ab040bf2ce2751fb, type: 2}
-  m_sharedMaterial: {fileID: -7626065482068015551, guid: e68c23d00ad0fa04ab040bf2ce2751fb, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79beab4d7167f904db34e22d4ce0fdb4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

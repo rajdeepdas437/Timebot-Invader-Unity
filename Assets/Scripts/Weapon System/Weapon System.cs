@@ -22,6 +22,9 @@ public class WeaponSystem : MonoBehaviour
 
     void Update()
     {
+        if(LevelManager.instance.IsGamePaused())
+            return;
+            
         if (Input.GetMouseButton(0) & fireCounter <= 0)
         {
             AudioManager.instance.PlaySFX(SFXNum);

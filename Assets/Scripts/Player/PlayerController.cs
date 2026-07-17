@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        if(LevelManager.instance.IsGamePaused())
+            return;
+        
+
         PlayerMovement();
         WeaponAim();
         PlayerAnimation();

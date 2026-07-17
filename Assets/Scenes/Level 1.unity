@@ -14345,6 +14345,17 @@ MonoBehaviour:
   invincibilityDuation: 2
   playerSprite: {fileID: 257656915}
   damageSFXNum: 6
+--- !u!114 &2027474766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4876850369553899096, guid: 22764c2174b4bad47bab9e0e780ed709, type: 3}
+  m_PrefabInstance: {fileID: 5413807433296892458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c085033dd10180443a7d55e2c8eacf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &2048594413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6727501110511755846, guid: d75860b601260bb4eaa5c066431472f2, type: 3}
@@ -14416,6 +14427,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1998889933305771121, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2027474766}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3810207013789234035, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
@@ -14783,6 +14814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 420842747015699160, guid: 3f562c6bfd4ef1a48962b5d2095536b6, type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4402056667274084015, guid: 3f562c6bfd4ef1a48962b5d2095536b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.015675
