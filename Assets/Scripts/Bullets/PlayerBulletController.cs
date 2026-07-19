@@ -27,6 +27,12 @@ public class PlayerBulletController : MonoBehaviour
             Instantiate(damageEffects[i], this.transform.position, this.transform.rotation);
             collision.GetComponent<EnemyController>().DamageEnemy(damageDealt);       
         }
+        if (collision.CompareTag("Boss"))
+        {
+            i=Random.Range(0,4);
+            Instantiate(damageEffects[i], this.transform.position, this.transform.rotation);
+            collision.GetComponent<BossHealthHandler>().DamageBoss(damageDealt);       
+        }
         else
         {
             Instantiate(bulletEffect, this.transform.position, this.transform.rotation); 

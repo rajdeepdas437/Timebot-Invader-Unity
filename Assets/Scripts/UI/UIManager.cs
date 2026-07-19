@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject pauseMenu;
 
-    void Start()
+    void Awake()
     {
         instance = this;
         anim=GetComponent<Animator>();
