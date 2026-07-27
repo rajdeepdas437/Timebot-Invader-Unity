@@ -72,6 +72,10 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        while(player == null)
+        {
+            player = FindAnyObjectByType<PlayerController>().transform;
+        }
         EnemyMovement();
         EnemyAnimation();
         EnemyShooting();
@@ -188,7 +192,6 @@ public class EnemyController : MonoBehaviour
                     wanderCounter = Random.Range(wanderLength*0.5f, wanderLength*1.25f);
                 }
             }
-            Debug.Log(directionToMoveIn);
         }
 
         if(shouldRunAway && playerEnemyDistance < runawayRange)

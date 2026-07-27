@@ -9,6 +9,7 @@ public class RoomManager : MonoBehaviour
     [SerializeField] List<Collider2D> enemies = new List<Collider2D>();
     private Collider2D roomCollider;
     private ContactFilter2D contactFilter2D;
+    
     void Start()
     {
         roomCollider=GetComponent<Collider2D>();

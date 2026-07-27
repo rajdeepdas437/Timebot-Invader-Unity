@@ -31,6 +31,7 @@ public class WeaponChest : MonoBehaviour
             opened=true;
             openKeyText.gameObject.SetActive(false);
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)

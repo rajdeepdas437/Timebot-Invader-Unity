@@ -15,10 +15,10 @@ public class BossBullets : MonoBehaviour
     {
         transform.position += bulletDirection * speed * Time.deltaTime;
 
-        if(!FindAnyObjectByType<BossController>().gameObject.activeInHierarchy)
-        {
-            Destroy(gameObject);
-        }
+        // if(!FindAnyObjectByType<BossController>().gameObject.activeInHierarchy)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

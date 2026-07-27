@@ -26,6 +26,9 @@ public class BossController : MonoBehaviour
     
     void Update()
     {
+        while(playerToChase == null)
+            playerToChase = FindAnyObjectByType<PlayerController>().transform;
+        
         if(playerToChase.position.x - transform.position.x > 0)
         {
             transform.rotation = Quaternion.Euler(0f,180f,0f);

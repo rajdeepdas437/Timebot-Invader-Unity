@@ -24,7 +24,6 @@ public class eyeProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger detected" + collision.gameObject.name);
         projectileSpeed=0;
         if(collision.CompareTag("Player"))
         {

@@ -209,6 +209,8 @@ MonoBehaviour:
   shouldWander: 1
   wanderLength: 2
   pauseLength: 2
+  shouldPatroll: 0
+  patrollPoints: []
 --- !u!50 &4543944037819493662
 Rigidbody2D:
   serializedVersion: 5

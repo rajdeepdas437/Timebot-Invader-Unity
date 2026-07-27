@@ -29,7 +29,19 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] PlayerHealthHandler playerHealthHandler;
 
-    
+    void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
+
     void Start()
     {
         instance = this;
@@ -124,6 +136,9 @@ public class PlayerController : MonoBehaviour
 
     private void WeaponAim()
     {
+        if(mainCamera == null)
+            mainCamera = Camera.main;
+    
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerPos = mainCamera.WorldToScreenPoint(transform.localPosition);
         float mouseAngle = Mathf.Atan2((mousePos.y - playerPos.y), (mousePos.x - playerPos.x)) * Mathf.Rad2Deg;

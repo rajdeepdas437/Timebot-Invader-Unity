@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6652182280968874472}
   - component: {fileID: 2518933188735827253}
   m_Layer: 8
-  m_Name: Enemy
+  m_Name: Skeletons
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,17 +79,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6dcd11322ab1445b417ae5f32bf529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  enemySpeed: 3
-  enemyRange: 3
-  chaseRange: 4
-  player: {fileID: 0}
-  SkeleAnim: {fileID: 0}
   enemyHealth: 100
+  enemySpeed: 3
+  shouldChasePlayer: 1
+  enemyRange: 7
+  chaseRange: 7
+  player: {fileID: 0}
   bloodSplatter: {fileID: 4356022494877417240, guid: e5420cfe140c3444e92b830df845f142, type: 3}
   enemyProjectile: {fileID: 8479330454311262644, guid: c5d1b086904437a43a3a907d80778bd8, type: 3}
   throwCooldown: 1
-  shootingRange: 6
+  shootingRange: 5
   enemyDamageSFXNum: 2
+  shouldRunAway: 0
+  runawayRange: 0
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
+  shouldPatroll: 0
+  patrollPoints: []
 --- !u!50 &6652182280968874472
 Rigidbody2D:
   serializedVersion: 5

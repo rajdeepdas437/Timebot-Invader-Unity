@@ -95,4 +95,14 @@ public class PlayerHealthHandler : MonoBehaviour
         UIManager.instance.healthSlider.value=currentHealth;
         UIManager.instance.healthText.text=currentHealth+"/"+maxHealth;
     }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
 }

@@ -26,7 +26,8 @@ public class UIManager : MonoBehaviour
     {
         instance = this;
         anim=GetComponent<Animator>();
-        coinText.text="0";   
+        coinText.text="0"; 
+        StartCoroutine(UpdatePlayerUI());  
     }
 
     void Update()
@@ -78,6 +79,23 @@ public class UIManager : MonoBehaviour
     public void PauseMenu(bool onOff)
     {
         pauseMenu.SetActive(onOff);
+    }
+
+    public IEnumerator UpdatePlayerUI()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        PlayerHealthHandler playerHealth = null;
+
+        while(playerHealth == null)
+        {
+            playerHealth = FindAnyObjectByType<PlayerHealthHandler>();
+        }
+
+        healthSlider.maxValue = playerHealth.GetMaxHealth();
+        healthSlider.value = playerHealth.GetCurrentHealth();
+        healthText.text = playerHealth.GetCurrentHealth() + "/" + playerHealth.GetMaxHealth();
+        coinText.text = GameManager.instance.GetCurrentCoins().ToString();
     }
 
 }
