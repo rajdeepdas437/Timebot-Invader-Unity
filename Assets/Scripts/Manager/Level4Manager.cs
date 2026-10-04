@@ -5,6 +5,12 @@ public class Level4Manager : MonoBehaviour
 {
     [SerializeField] List<EnemyController> enemies = new List<EnemyController>();
     [SerializeField] WeaponChest treasureChest;
+    [SerializeField] GameObject nextLvlDoor;
+
+    void Start()
+    {
+        nextLvlDoor.SetActive(false);
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,6 +39,7 @@ public class Level4Manager : MonoBehaviour
         if(enemies.Count == 0)
         {
             treasureChest.gameObject.SetActive(true);
+            nextLvlDoor.SetActive(true);
         }
 
         

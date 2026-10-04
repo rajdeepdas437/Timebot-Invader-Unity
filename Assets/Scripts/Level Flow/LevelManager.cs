@@ -34,27 +34,27 @@ public class LevelManager : MonoBehaviour
 
     public void LevelPicker()
     {
-        levelToGo_1 = SceneManager.GetActiveScene().buildIndex;
+        // levelToGo_1 = SceneManager.GetActiveScene().buildIndex;
 
-        while(levelToGo_1 == SceneManager.GetActiveScene().buildIndex)
-        {
-            int rand = Random.Range(1, SceneManager.sceneCountInBuildSettings-1);
-            print($"level to go 1 = {rand}");
-            levelToGo_1 = rand;
-        }
+        // while(levelToGo_1 == SceneManager.GetActiveScene().buildIndex)
+        // {
+        //     int rand = Random.Range(1, SceneManager.sceneCountInBuildSettings-1);       //for random lvl gen
+        //     print($"level to go 1 = {rand}");
+        //     levelToGo_1 = rand;
+        // }
 
-        levelExit_1.PrintLevelName(levelToGo_1);
+        // levelExit_1.PrintLevelName(levelToGo_1);
 
-        levelToGo_2 = SceneManager.GetActiveScene().buildIndex;
+        // levelToGo_2 = SceneManager.GetActiveScene().buildIndex;
 
-        while(levelToGo_2 == SceneManager.GetActiveScene().buildIndex || levelToGo_2 == levelToGo_1)
-        {
-            int rand = Random.Range(1, SceneManager.sceneCountInBuildSettings-1);
-            print($"level to go 2 = {rand}");
-            levelToGo_2 = rand;
-        }
+        // while(levelToGo_2 == SceneManager.GetActiveScene().buildIndex || levelToGo_2 == levelToGo_1)  
+        // {
+        //     int rand = Random.Range(1, SceneManager.sceneCountInBuildSettings-1);       //for random lvl gen
+        //     print($"level to go 2 = {rand}");
+        //     levelToGo_2 = rand;
+        // }
 
-        levelExit_2.PrintLevelName(levelToGo_2);
+        // levelExit_2.PrintLevelName(levelToGo_2);
     }
 
     public void Retry()

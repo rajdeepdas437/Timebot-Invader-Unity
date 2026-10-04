@@ -9,8 +9,7 @@ public class LevelExit : MonoBehaviour
 
     private void Start()
     {
-        
-
+        levelToLoad=SceneManager.GetActiveScene().buildIndex+1;
     }
 
     public void PrintLevelName(int levelIndex)

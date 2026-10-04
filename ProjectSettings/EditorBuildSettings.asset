@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/ShopLevel.unity
     guid: f64e904a7d0406740a05e5e869f90d6d
   - enabled: 1
-    path: Assets/Scenes/Spike room.unity
-    guid: 06ce9a70214c46a4b8f46e8b0c6c07a4
-  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 40a4e072700052f40b9ff419ccc8e3e2
+  - enabled: 1
+    path: Assets/Scenes/Spike room.unity
+    guid: 06ce9a70214c46a4b8f46e8b0c6c07a4
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: d52831c568559a84ca0c8a71ae330980

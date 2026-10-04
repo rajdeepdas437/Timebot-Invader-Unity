@@ -26117,6 +26117,10 @@ PrefabInstance:
       propertyPath: waveScript
       value: 
       objectReference: {fileID: 1608525042}
+    - target: {fileID: 1122498853157772842, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1387170430778369254, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
       propertyPath: m_Name
       value: Door (1)
@@ -26760,7 +26764,18 @@ MonoBehaviour:
   - name: Skeleton Wave
     enemies:
     - {fileID: 6304551357483114643, guid: 6e456bcaebfe8ce4d8cf14d85cdeb12f, type: 3}
-    amountOfEnemies: 2
+    amountOfEnemies: 5
+    spawnDelay: 3
+  - name: Mushrooms
+    enemies:
+    - {fileID: 3691024618572766266, guid: 480aebbb062282c46a714f10b472a68b, type: 3}
+    amountOfEnemies: 5
+    spawnDelay: 3
+  - name: Goblins and Eye
+    enemies:
+    - {fileID: 8252393518904451706, guid: 05a1e19124263f44d8b6956cdba2b912, type: 3}
+    - {fileID: 6991456030498015031, guid: aede3c02dfc89364b97bb40653f69fa7, type: 3}
+    amountOfEnemies: 5
     spawnDelay: 3
   timeBetweenWaves: 5
   waveCountDown: 0

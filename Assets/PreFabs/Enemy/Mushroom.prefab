@@ -83,13 +83,13 @@ MonoBehaviour:
   enemyHealth: 100
   enemySpeed: 3
   shouldChasePlayer: 1
-  enemyRange: 3
-  chaseRange: 4
+  enemyRange: 4
+  chaseRange: 5
   player: {fileID: 0}
   bloodSplatter: {fileID: 4356022494877417240, guid: e5420cfe140c3444e92b830df845f142, type: 3}
   enemyProjectile: {fileID: 2148178151435518084, guid: 25dec5e232c4c1c4f981b1be14bcdf9a, type: 3}
   throwCooldown: 1
-  shootingRange: 3
+  shootingRange: 4
   enemyDamageSFXNum: 2
   shouldRunAway: 0
   runawayRange: 5
