@@ -44,4 +44,10 @@ public class GameManager : MonoBehaviour
     {
         return currentCoins;
     }
+
+    public void ResetCoins()
+    {
+        currentCoins = 0;
+        UIManager.instance.UpdateCoinUI(currentCoins);
+    }
 }

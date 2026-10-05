@@ -36,7 +36,8 @@ public class PlayerHealthHandler : MonoBehaviour
                 AudioManager.instance.DeathMusic();
                 gameObject.SetActive(false);
             }
-            StartCoroutine(Invincibility());
+            if(currentHealth>0)
+                StartCoroutine(Invincibility());
         }
         
     }
@@ -104,5 +105,11 @@ public class PlayerHealthHandler : MonoBehaviour
     public int GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public void ResetPlayerHealth()
+    {
+        currentHealth = maxHealth;
+        isInvincible = false;
     }
 }

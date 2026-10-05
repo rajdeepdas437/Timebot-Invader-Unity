@@ -163,6 +163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955144331203978868, guid: 731eb4e05d750a348a28334204e621cf, type: 3}
+      propertyPath: itemDropChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3133168916870619920, guid: 731eb4e05d750a348a28334204e621cf, type: 3}
       propertyPath: m_Name
       value: Pot1 (1)
@@ -26114,6 +26118,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 600424295}
     m_Modifications:
     - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+      propertyPath: doorCanvas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
       propertyPath: waveScript
       value: 
       objectReference: {fileID: 1608525042}
@@ -26169,8 +26181,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 229968281935339242, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+    - {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+    - {fileID: 4613392374319786078, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1122498853157772842, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
@@ -26764,19 +26780,18 @@ MonoBehaviour:
   - name: Skeleton Wave
     enemies:
     - {fileID: 6304551357483114643, guid: 6e456bcaebfe8ce4d8cf14d85cdeb12f, type: 3}
-    amountOfEnemies: 5
-    spawnDelay: 3
-  - name: Mushrooms
+    amountOfEnemies: 1
+    spawnDelay: 2
+  - name: Flying Eye
     enemies:
-    - {fileID: 3691024618572766266, guid: 480aebbb062282c46a714f10b472a68b, type: 3}
-    amountOfEnemies: 5
-    spawnDelay: 3
+    - {fileID: 6991456030498015031, guid: aede3c02dfc89364b97bb40653f69fa7, type: 3}
+    amountOfEnemies: 1
+    spawnDelay: 2
   - name: Goblins and Eye
     enemies:
     - {fileID: 8252393518904451706, guid: 05a1e19124263f44d8b6956cdba2b912, type: 3}
-    - {fileID: 6991456030498015031, guid: aede3c02dfc89364b97bb40653f69fa7, type: 3}
-    amountOfEnemies: 5
-    spawnDelay: 3
+    amountOfEnemies: 1
+    spawnDelay: 2
   timeBetweenWaves: 5
   waveCountDown: 0
   spawnPoints:
@@ -26785,6 +26800,17 @@ MonoBehaviour:
   - {fileID: 827252979}
   - {fileID: 146300175}
   - {fileID: 727137153}
+--- !u!114 &1608525043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3100173829355941304, guid: 2e48de1037fbc744cad3bb2b64b62bdc, type: 3}
+  m_PrefabInstance: {fileID: 1608525040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608525041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c085033dd10180443a7d55e2c8eacf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1683358700
 GameObject:
   m_ObjectHideFlags: 0
@@ -27290,7 +27316,7 @@ PrefabInstance:
     - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1608525043}
     - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseResumeGame
@@ -27530,6 +27556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955144331203978868, guid: 731eb4e05d750a348a28334204e621cf, type: 3}
+      propertyPath: itemDropChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3133168916870619920, guid: 731eb4e05d750a348a28334204e621cf, type: 3}
       propertyPath: m_Name
       value: Pot1
@@ -27710,9 +27740,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 600424295}
     m_Modifications:
     - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
       propertyPath: waveScript
       value: 
       objectReference: {fileID: 1608525042}
+    - target: {fileID: 520853717843326167, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
+      propertyPath: isWaveLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1387170430778369254, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
       propertyPath: m_Name
       value: Door
@@ -27758,7 +27796,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4147528070084878289, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d746a594c7bf23d4b918baa174c594c6, type: 3}

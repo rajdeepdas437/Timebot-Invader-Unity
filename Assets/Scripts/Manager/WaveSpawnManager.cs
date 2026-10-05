@@ -105,7 +105,8 @@ public class WaveSpawnManager : MonoBehaviour
         if(nextWave+1 == waves.Length)
         {
             wavesCompleted=true;
-            // LevelManager.instance.LevelPicker();
+            LevelManager.instance.LevelPicker();
+            Debug.Log("waves completed");
         }
         else
         {

@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        instance = this;
+        // instance = this;
         rb=GetComponent<Rigidbody2D>();
         mainCamera=Camera.main;
         WeaponPivot=transform.Find("WeaponPivotPoint");
@@ -66,6 +66,9 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        if(LevelManager.instance==null)
+            return;
+        
         if(LevelManager.instance.IsGamePaused())
             return;
         
@@ -111,6 +114,12 @@ public class PlayerController : MonoBehaviour
 
     private static void SwitchWeaponUI(WeaponSystem Weapon)
     {
+        if(UIManager.instance==null)
+        {
+            Debug.Log("UI Manager not loaded");
+            return;
+        }
+            
         UIManager.instance.WeaponUI(Weapon.gameObject.GetComponent<WeaponSystem>().GetGunImage(), Weapon.gameObject.GetComponent<WeaponSystem>().GetGunName());
     }
 
@@ -198,6 +207,40 @@ public class PlayerController : MonoBehaviour
     {
         availableWeapons.Add(newWeapon);
         currentGun=availableWeapons.Count-1;
+
+        foreach(WeaponSystem Weapon in availableWeapons)
+        {
+            Weapon.gameObject.SetActive(false);
+            if(Weapon == availableWeapons[currentGun])
+            {
+                Weapon.gameObject.SetActive(true);
+                SwitchWeaponUI(Weapon);
+            }
+        }
+    }
+
+    public void RefreshWeaponUI()
+    {
+        Debug.Log("Current gun (RefreshWeaponUI fxn)= " + currentGun);
+        SwitchWeaponUI(availableWeapons[currentGun]);
+    }
+
+    public void ResetPlayerWeapons()
+    {
+        Debug.Log("avlbl wpns : " + availableWeapons.Count);
+        foreach(WeaponSystem weapon in availableWeapons)
+        {
+            if(weapon.GetGunName()!="Pistol")
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
+
+        availableWeapons.RemoveAll(weapon => weapon.GetGunName() != "Pistol");
+
+        currentGun=0;
+
+        Debug.Log("Current gun (ResetPlayerWeapons fxn) : " + currentGun);
 
         foreach(WeaponSystem Weapon in availableWeapons)
         {

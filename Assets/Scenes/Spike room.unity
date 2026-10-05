@@ -30396,6 +30396,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e48de1037fbc744cad3bb2b64b62bdc, type: 3}
+--- !u!114 &1877222825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3100173829355941304, guid: 2e48de1037fbc744cad3bb2b64b62bdc, type: 3}
+  m_PrefabInstance: {fileID: 1877222824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c085033dd10180443a7d55e2c8eacf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1884270514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31755,6 +31766,18 @@ PrefabInstance:
     - target: {fileID: 2001714197911116414, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1877222825}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588568963683059261, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3810207013789234035, guid: 00693287f0d5ef3489c85692fbd9161f, type: 3}
       propertyPath: m_Pivot.x

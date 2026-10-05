@@ -9,16 +9,21 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     [SerializeField] float timeToLoad=2f;
 
-    public int levelToGo_1, levelToGo_2;
-    public LevelExit levelExit_1, levelExit_2;
+    public int levelToGo_1;
+    public LevelExit levelExit_1;
 
     private bool gameIsPaused;
 
     [SerializeField] Transform playerSpawnPoint;
 
-    void Start()
+    void Awake()
     {
         instance=this;
+    }
+
+    void Start()
+    {
+        
         gameIsPaused=false;
         SetPlayerSpawnPosition();
     }
@@ -34,6 +39,10 @@ public class LevelManager : MonoBehaviour
 
     public void LevelPicker()
     {
+
+        levelToGo_1=SceneManager.GetActiveScene().buildIndex+1;
+        // levelExit_1.PrintLevelName(levelToGo_1);
+
         // levelToGo_1 = SceneManager.GetActiveScene().buildIndex;
 
         // while(levelToGo_1 == SceneManager.GetActiveScene().buildIndex)
@@ -59,6 +68,9 @@ public class LevelManager : MonoBehaviour
 
     public void Retry()
     {
+        PlayerController.instance.gameObject.SetActive(true);      //coz after death player is getting destroyed
+        PlayerController.instance.GetComponent<PlayerHealthHandler>().ResetPlayerHealth();
+        GameManager.instance.ResetCoins();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

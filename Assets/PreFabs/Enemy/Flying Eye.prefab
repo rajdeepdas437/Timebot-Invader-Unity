@@ -196,10 +196,9 @@ MonoBehaviour:
   enemyHealth: 100
   enemySpeed: 3
   shouldChasePlayer: 0
-  enemyRange: 3
-  chaseRange: 4
+  enemyRange: 5
+  chaseRange: 5
   player: {fileID: 0}
-  enemyAnim: {fileID: 4390770497512449051}
   bloodSplatter: {fileID: 4356022494877417240, guid: e5420cfe140c3444e92b830df845f142, type: 3}
   enemyProjectile: {fileID: 8934067339541137670, guid: 2c1111542f7d3ba42852bb3ffaab16c6, type: 3}
   throwCooldown: 1
@@ -207,6 +206,11 @@ MonoBehaviour:
   enemyDamageSFXNum: 2
   shouldRunAway: 1
   runawayRange: 5
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
+  shouldPatroll: 0
+  patrollPoints: []
 --- !u!50 &2769565658404930517
 Rigidbody2D:
   serializedVersion: 5

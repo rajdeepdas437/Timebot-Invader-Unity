@@ -75,6 +75,9 @@ public class EnemyController : MonoBehaviour
         while(player == null)
         {
             player = FindAnyObjectByType<PlayerController>().transform;
+
+            if(player==null)
+                return;
         }
         EnemyMovement();
         EnemyAnimation();

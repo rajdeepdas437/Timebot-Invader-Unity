@@ -90,12 +90,15 @@ public class UIManager : MonoBehaviour
         while(playerHealth == null)
         {
             playerHealth = FindAnyObjectByType<PlayerHealthHandler>();
+            yield return null;
         }
 
         healthSlider.maxValue = playerHealth.GetMaxHealth();
         healthSlider.value = playerHealth.GetCurrentHealth();
         healthText.text = playerHealth.GetCurrentHealth() + "/" + playerHealth.GetMaxHealth();
         coinText.text = GameManager.instance.GetCurrentCoins().ToString();
+
+        PlayerController.instance.RefreshWeaponUI();
     }
 
 }

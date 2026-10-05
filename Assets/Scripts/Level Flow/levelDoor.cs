@@ -10,6 +10,7 @@ public class levelDoor : MonoBehaviour
     private bool canOpenDoor=false;
     [SerializeField] WaveSpawnManager waveScript;
     private bool enemiesDefeated;
+    [SerializeField] bool isWaveLevel;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class levelDoor : MonoBehaviour
 
     void Update()
     {
-        enemiesDefeated = waveScript.IsWaveCompleted();
+        if(isWaveLevel)
+            enemiesDefeated = waveScript.IsWaveCompleted();
 
         if(canOpenDoor && enemiesDefeated)
         {

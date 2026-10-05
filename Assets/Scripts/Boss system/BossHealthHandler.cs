@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealthHandler : MonoBehaviour
 {
@@ -38,6 +40,7 @@ public class BossHealthHandler : MonoBehaviour
 
     public void DestroyBoss()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         Destroy(gameObject);
     }
 
@@ -55,4 +58,5 @@ public class BossHealthHandler : MonoBehaviour
     {
         isInvincible = OnOff;
     }
+
 }
