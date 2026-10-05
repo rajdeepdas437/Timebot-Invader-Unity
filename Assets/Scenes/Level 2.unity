@@ -26780,17 +26780,17 @@ MonoBehaviour:
   - name: Skeleton Wave
     enemies:
     - {fileID: 6304551357483114643, guid: 6e456bcaebfe8ce4d8cf14d85cdeb12f, type: 3}
-    amountOfEnemies: 1
+    amountOfEnemies: 3
     spawnDelay: 2
   - name: Flying Eye
     enemies:
     - {fileID: 6991456030498015031, guid: aede3c02dfc89364b97bb40653f69fa7, type: 3}
-    amountOfEnemies: 1
+    amountOfEnemies: 3
     spawnDelay: 2
   - name: Goblins and Eye
     enemies:
     - {fileID: 8252393518904451706, guid: 05a1e19124263f44d8b6956cdba2b912, type: 3}
-    amountOfEnemies: 1
+    amountOfEnemies: 3
     spawnDelay: 2
   timeBetweenWaves: 5
   waveCountDown: 0

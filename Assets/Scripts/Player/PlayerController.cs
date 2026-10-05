@@ -5,7 +5,6 @@ using System.Linq;
 using JetBrains.Annotations;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
 
